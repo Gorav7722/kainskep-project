@@ -1,0 +1,11 @@
+version: '3'
+services:
+  csvserver:
+    build: ./gencsv.sh
+    image: infracloudio/csvserver:latest
+    env_file:
+      - ./csvserver.env
+    ports:
+      - "9393:9300"
+    volumes:
+      - ./inputFile:/csvserver/inputdata
