@@ -1,7 +1,6 @@
 version: '3'
 services:
   csvserver:
-    build: ./gencsv.sh
     image: infracloudio/csvserver:latest
     env_file:
       - ./csvserver.env
